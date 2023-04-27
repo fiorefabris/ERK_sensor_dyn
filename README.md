@@ -1,2 +1,2 @@
-# ERK_sensor_dyn
+# ERK Sensor Dynamics
 Package for studying information loss in single-cell live-sensors 
