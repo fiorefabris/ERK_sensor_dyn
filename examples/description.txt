@@ -1,0 +1,49 @@
+Rate equations of the reporter in its 4 states: unphosphorilated on the cytosol(rup), 
+unphosphorilated on the nucleus (rnu), phosphorilated on the cytosol (rcp), phosphorilated on the nucleus(rnp)
+
+The equations & parameters had been taken from the supplementary material of Regot 2014 paper
+
+
+sensor_1.pdf: explore amplitude and frequency values. Plotting nuclear activated kinase (blue), nuclear sensor phosphorilated & nuclear sensor unphosphorilated (orange)
+sensor_2.pdf: explore amplitude and frequency values. Plotting nuclear activated kinase, nuclear sensor phosphorilated & nuclear sensor unphosphorilated
+sensor_3.pdf: explore frequency values. Plotting nuclear activated kinase & nuclear sensor (phosphorilated + unphosphorilated )
+sensor_4.pdf: explore amplitude and frequency values. Plotting nuclear activated kinase, nuclear sensor phosphorilated, nuclear sensor unphosphorilated,
+cytosol sensor phosphorilated, cytosol sensor unphosphorilated
+
+
+
+Initial conditions & parameters:
+    
+[rcu_0 ,rnu_0 ,rcp_0 ,rnp_0 ]= [0.4,0,0,0]
+T = 150
+steps = 10000
+
+Kin_c = 0.3 * amp * (1+ np.cos(w*t))
+Kin_n = 0.7* amp * (1+ np.cos(w*t))
+
+
+r_total = 0.4
+kv = 4
+kiu = 0.44
+keu = 0.11
+kip = 0.16
+kep = 0.2
+kcat = 20
+Km = 3
+kdc = 0.03
+kdn = 0.03
+Kmd = 0.1
+
+sensor_5.pdf: kinase dynamics modeled as Adler with white gaussian noise. Explore amplitude values. Plotting nuclear activated kinase (blue), nuclear sensor phosphorilated & nuclear sensor unphosphorilated (orange). The sensor amplitude is inverted and + 0.5
+sensor_6.pdf: kinase dynamics modeled as Adler with white gaussian noise. Explore amplitude values. Plotting nuclear activated kinase (blue), nuclear sensor phosphorilated & nuclear sensor unphosphorilated (orange). This is with different Adler equation parameters.
+
+Same Initial conditions & parameters, except T = 300
+
+sensor_7.pdf: kinase dynamics modeled as a step function. Explore amplitude amplitude and frequency values. Plotting nuclear activated kinase (blue), nuclear sensor phosphorilated & nuclear sensor unphosphorilated (orange)
+FFT_sensor_7.pdf: FFT of Sensor_7. The FFT is devided by omega. 
+
+
+Same Initial conditions & parameters, except T = 300 and steps = 100000
+
+
+Sensor_8.pdf:  explore amplitude and frequency values. Plotting nuclear activated kinase (blue), nuclear sensor phosphorilated & nuclear sensor unphosphorilated (orange). Same parameters as Sensor_7.pdf
